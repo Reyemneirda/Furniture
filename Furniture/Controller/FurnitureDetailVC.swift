@@ -82,10 +82,14 @@ class FurnitureDetailVC: UIViewController, UIImagePickerControllerDelegate, UINa
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             else {return}
         self.furniture?.imageData = UIImagePNGRepresentation(selectedImage)
-        
         self.updateView()
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
     
     
     @IBAction func actionButtonTapped(_ sender: Any)
