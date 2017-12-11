@@ -44,7 +44,7 @@ class FurnitureDetailVC: UIViewController, UIImagePickerControllerDelegate, UINa
         let picker: UIImagePickerController = UIImagePickerController ()
         picker.delegate = self
         
-        let alertController: UIAlertController = UIAlertController(title: "", message: "Choose An Action", preferredStyle: .actionSheet)
+        let alertController: UIAlertController = UIAlertController(title: "Choose a Picture", message: "Choose An Action", preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         
         alertController.addAction(cancelAction)
