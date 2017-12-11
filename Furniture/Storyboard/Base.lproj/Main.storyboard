@@ -75,12 +75,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPd-tb-wDD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPd-tb-wDD">
                                 <rect key="frame" x="16" y="80" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EPd-tb-wDD" secondAttribute="height" multiplier="1:1" id="YPe-67-7oo"/>
                                 </constraints>
-                                <state key="normal" title="Choose Photo"/>
+                                <state key="normal" title="Choose Photo">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="choosePhotoButtonTapped:" destination="cv4-TC-R5P" eventType="touchUpInside" id="aDh-rf-12q"/>
                                 </connections>
