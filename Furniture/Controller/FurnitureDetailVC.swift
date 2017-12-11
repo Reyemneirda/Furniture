@@ -90,12 +90,14 @@ class FurnitureDetailVC: UIViewController, UIImagePickerControllerDelegate, UINa
     
     @IBAction func actionButtonTapped(_ sender: Any)
     {
-        guard let image = self.choosePhotoButton.imageView else { return }
-        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        activityController.popoverPresentationController?.sourceView = sender as? UIView
+        guard let furniture = furniture else {return}
+        var items: [Any] = ["\(furniture.name): \(furniture.description)"]
+        if let image = choosePhotoButton.backgroundImage(for: .normal) {
+            items.append(image)
+        }
         
+        let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
-        
     }
 
     /*
